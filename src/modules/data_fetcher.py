@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def download_historical_data(symbol: str, timeframe: str = "1hour") -> pd.DataFrame:
     service = CryptoService()
-    service.refresh_list_of_symbols() # Uncomment for the first usage
+    # service.refresh_list_of_symbols() # Uncomment for the first usage
     df = service.get_history_of_symbol(f"{symbol}", timeframe)
     df["Date"] = df["Timestamp"].apply(datetime.fromtimestamp)
     df.set_index("Date", inplace=True)
