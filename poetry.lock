@@ -13,6 +13,38 @@ files = [
 ]
 
 [[package]]
+name = "accumulation-tree"
+version = "0.6.2"
+description = "Red/black tree with support for fast accumulation of values in a key range"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "accumulation_tree-0.6.2.tar.gz", hash = "sha256:0de0f083ba56a82126d0af5940ba968264b201ab109b43581c6e709968417141"},
+]
+
+[[package]]
+name = "anticipy"
+version = "0.2.1"
+description = "Forecasting tools"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "anticipy-0.2.1-py3-none-any.whl", hash = "sha256:0739500f688b863df5f286d7de62d4e48af0a16cc2eeb136bbd80f3307b1543a"},
+    {file = "anticipy-0.2.1.tar.gz", hash = "sha256:adf5e2ee1d831a72a8fb77c533cff37220d772cd7b06186cced2e99834a0f7eb"},
+]
+
+[package.dependencies]
+numpy = ">=1.15.1"
+pandas = ">=0.23.0"
+plotly = ">=3.5.0"
+scipy = ">=1.0.0"
+
+[package.extras]
+extras = ["ipython (>=5.8.0)", "ipywidgets (==7.5)", "matplotlib (>=2.2.3)", "notebook (>=5.3)"]
+
+[[package]]
 name = "appnope"
 version = "0.1.3"
 description = "Disable App Nap on macOS >= 10.9"
@@ -130,6 +162,18 @@ files = [
 ]
 
 [[package]]
+name = "backoff"
+version = "2.2.1"
+description = "Function decoration for backoff and retry"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "backoff-2.2.1-py3-none-any.whl", hash = "sha256:63579f9a0628e06278f7e47b7d7d5b6ce20dc65c5e96a6f3ca99a6adca0396e8"},
+    {file = "backoff-2.2.1.tar.gz", hash = "sha256:03f829f5bb1923180821643f8753b0502c3b682293992485b0eef2807afa5cba"},
+]
+
+[[package]]
 name = "black"
 version = "23.1.0"
 description = "The uncompromising code formatter."
@@ -178,6 +222,46 @@ colorama = ["colorama (>=0.4.3)"]
 d = ["aiohttp (>=3.7.4)"]
 jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
+
+[[package]]
+name = "boto3"
+version = "1.26.109"
+description = "The AWS SDK for Python"
+category = "main"
+optional = false
+python-versions = ">= 3.7"
+files = [
+    {file = "boto3-1.26.109-py3-none-any.whl", hash = "sha256:a1c48674c2ff25ddced599c51d14ba7a6dbe9fd51641e8d63a6887bebd9712d7"},
+    {file = "boto3-1.26.109.tar.gz", hash = "sha256:d388cb7f54f1a3056f91ffcfb5cf18b226454204e5df7a5c10774718c3fbb166"},
+]
+
+[package.dependencies]
+botocore = ">=1.29.109,<1.30.0"
+jmespath = ">=0.7.1,<2.0.0"
+s3transfer = ">=0.6.0,<0.7.0"
+
+[package.extras]
+crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
+
+[[package]]
+name = "botocore"
+version = "1.29.109"
+description = "Low-level, data-driven core of boto 3."
+category = "main"
+optional = false
+python-versions = ">= 3.7"
+files = [
+    {file = "botocore-1.29.109-py3-none-any.whl", hash = "sha256:cf43dddb7e2ba5425fe19fad68b10043307b61d9103d06566f1ab6034e38b8db"},
+    {file = "botocore-1.29.109.tar.gz", hash = "sha256:2e449525f0ccedb31fdb962a77caac48b4c486c23515b84c5989a39a1823a024"},
+]
+
+[package.dependencies]
+jmespath = ">=0.7.1,<2.0.0"
+python-dateutil = ">=2.1,<3.0.0"
+urllib3 = ">=1.25.4,<1.27"
+
+[package.extras]
+crt = ["awscrt (==0.16.9)"]
 
 [[package]]
 name = "cachetools"
@@ -394,6 +478,18 @@ files = [
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
+name = "cloudpickle"
+version = "2.2.1"
+description = "Extended pickling support for Python objects"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "cloudpickle-2.2.1-py3-none-any.whl", hash = "sha256:61f594d1f4c295fa5cd9014ceb3a1fc4a70b0de1164b94fbc2d854ccba056f9f"},
+    {file = "cloudpickle-2.2.1.tar.gz", hash = "sha256:d89684b8de9e34a2a43b3460fbca07d09d6e25ce858df4d5a44240403b6178f5"},
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -422,6 +518,29 @@ traitlets = ">=5.3"
 
 [package.extras]
 test = ["pytest"]
+
+[[package]]
+name = "contextlib2"
+version = "21.6.0"
+description = "Backports and enhancements for the contextlib module"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "contextlib2-21.6.0-py2.py3-none-any.whl", hash = "sha256:3fbdb64466afd23abaf6c977627b75b6139a5a3e8ce38405c5b413aed7a0471f"},
+    {file = "contextlib2-21.6.0.tar.gz", hash = "sha256:ab1e2bfe1d01d968e1b7e8d9023bc51ef3509bba217bb730cee3827e1ee82869"},
+]
+
+[[package]]
+name = "contexttimer"
+version = "0.3.3"
+description = "A timer context manager measuring the clock wall time of the code block it contains."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "contexttimer-0.3.3.tar.gz", hash = "sha256:35a1efd389af3f1ca509f33ff23e17d98b66c8fde5ba2a4eb8a8b7fa456598a5"},
+]
 
 [[package]]
 name = "contourpy"
@@ -499,6 +618,53 @@ test = ["Pillow", "matplotlib", "pytest"]
 test-no-images = ["pytest"]
 
 [[package]]
+name = "copulas"
+version = "0.2.1"
+description = "A python library for building different types of copulas and using them for sampling."
+category = "main"
+optional = false
+python-versions = ">=3.4"
+files = [
+    {file = "copulas-0.2.1-py2.py3-none-any.whl", hash = "sha256:5089d65dfcc5f39af5a9b2e0de812176516170fa5b5a9b7e997cd1f82eed2596"},
+    {file = "copulas-0.2.1.tar.gz", hash = "sha256:10c33ce3ab0348b385d15c3fb51ed085b9565c415a96055caf2b43d4163fdd28"},
+]
+
+[package.dependencies]
+boto3 = ">=1.7.47"
+exrex = ">=0.10.5"
+matplotlib = ">=2.2.2"
+numpy = ">=1.13.1"
+pandas = ">=0.22.0"
+scipy = ">=0.19.1"
+
+[package.extras]
+dev = ["Sphinx (>=1.7.1)", "autoflake (>=1.1)", "autopep8 (>=1.3.5)", "bumpversion (>=0.5.3)", "coverage (>=4.5.1)", "flake8 (>=3.5.0)", "isort (>=4.3.4)", "pytest (>=3.4.2)", "pytest-cov (>=2.6.0)", "recommonmark (>=0.4.0)", "sphinx-rtd-theme (>=0.2.4)", "tox (>=2.9.1)", "twine (>=1.10.0)", "wheel (>=0.30.0)"]
+test = ["pytest (>=3.4.2)", "pytest-cov (>=2.6.0)"]
+
+[[package]]
+name = "copulas"
+version = "0.8.0"
+description = "Create tabular synthetic data using copulas-based modeling."
+category = "main"
+optional = false
+python-versions = ">=3.7,<3.12"
+files = [
+    {file = "copulas-0.8.0-py2.py3-none-any.whl", hash = "sha256:5127be7c4af2a5098954f718c234496f03525c63b3c6b5f593cab31049de643f"},
+    {file = "copulas-0.8.0.tar.gz", hash = "sha256:fa38b4b5f14582a71242f1de6bada4485f9bd4adc50c6f6571f2c121d5a57c12"},
+]
+
+[package.dependencies]
+matplotlib = {version = ">=3.4.0,<4", markers = "python_version >= \"3.7\" and python_version < \"3.10\""}
+numpy = {version = ">=1.20.0,<2", markers = "python_version < \"3.10\""}
+pandas = {version = ">=1.1.3,<2", markers = "python_version < \"3.10\""}
+scipy = {version = ">=1.5.4,<2", markers = "python_version < \"3.10\""}
+
+[package.extras]
+dev = ["Jinja2 (>=2,<3)", "Sphinx (>=1.7.1,<3)", "autoflake (>=1.1,<2)", "autopep8 (>=1.4.3,<1.6)", "boto3 (>=1.7.47,<1.10)", "bumpversion (>=0.5.3,<0.6)", "coverage (>=4.5.1,<6)", "dlint (>=0.11.0,<0.12)", "doc8 (>=0.8.0,<0.9)", "docutils (>=0.10,<0.15)", "flake8 (>=3.7.7,<4)", "flake8-absolute-import (>=1.0,<2)", "flake8-builtins (>=1.5.3,<1.6)", "flake8-comprehensions (>=3.6.1,<3.7)", "flake8-debugger (>=4.0.0,<4.1)", "flake8-docstrings (>=1.5.0,<2)", "flake8-eradicate (>=1.1.0,<1.2)", "flake8-expression-complexity (>=0.0.9,<0.1)", "flake8-fixme (>=1.1.1,<1.2)", "flake8-mock (>=0.3,<0.4)", "flake8-multiline-containers (>=0.0.18,<0.1)", "flake8-mutable (>=1.2.0,<1.3)", "flake8-print (>=4.0.0,<4.1)", "flake8-pytest-style (>=1.5.0,<2)", "flake8-quotes (>=3.3.0,<4)", "flake8-sfs (>=0.0.3,<0.1)", "flake8-variables-names (>=0.0.4,<0.1)", "invoke", "isort (>=4.3.4,<5)", "jupyter (>=1.0.0,<2)", "m2r (>=0.2.0,<0.3)", "markupsafe (<=2.0.1)", "nbsphinx (>=0.5.0,<0.7)", "pandas-vet (>=0.2.2,<0.3)", "pep8-naming (>=0.12.1,<0.13)", "pip (>=9.0.1)", "pydocstyle (>=6.1.1,<6.2)", "pytest (>=6.2.5,<7)", "pytest-cov (>=2.6.0,<3)", "pytest-rerunfailures (>=9.0.0,<10)", "rundoc (>=0.4.3,<0.5)", "scikit-learn (>=0.24,<1.2)", "sphinx-rtd-theme (>=0.2.4,<0.5)", "tabulate (>=0.8.3,<0.9)", "tox (>=2.9.1,<4)", "twine (>=1.10.0,<4)", "urllib3 (>=1.20,<1.26)", "watchdog (>=0.8.3,<0.11)", "wheel (>=0.30.0)"]
+test = ["jupyter (>=1.0.0,<2)", "markupsafe (<=2.0.1)", "pytest (>=6.2.5,<7)", "pytest-cov (>=2.6.0,<3)", "pytest-rerunfailures (>=9.0.0,<10)", "rundoc (>=0.4.3,<0.5)", "scikit-learn (>=0.24,<1.2)"]
+tutorials = ["jupyter (>=1.0.0,<2)", "markupsafe (<=2.0.1)", "scikit-learn (>=0.24,<1.2)"]
+
+[[package]]
 name = "cycler"
 version = "0.11.0"
 description = "Composable style cycles"
@@ -551,6 +717,25 @@ files = [
 ]
 
 [[package]]
+name = "deepdiff"
+version = "6.3.0"
+description = "Deep Difference and Search of any Python object/data. Recreate objects by adding adding deltas to each other."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "deepdiff-6.3.0-py3-none-any.whl", hash = "sha256:15838bd1cbd046ce15ed0c41e837cd04aff6b3e169c5e06fca69d7aa11615ceb"},
+    {file = "deepdiff-6.3.0.tar.gz", hash = "sha256:6a3bf1e7228ac5c71ca2ec43505ca0a743ff54ec77aa08d7db22de6bc7b2b644"},
+]
+
+[package.dependencies]
+ordered-set = ">=4.0.2,<4.2.0"
+
+[package.extras]
+cli = ["click (==8.1.3)", "pyyaml (==6.0)"]
+optimize = ["orjson"]
+
+[[package]]
 name = "execnb"
 version = "0.1.5"
 description = "A description of your project"
@@ -583,6 +768,18 @@ files = [
 
 [package.extras]
 tests = ["asttokens", "littleutils", "pytest", "rich"]
+
+[[package]]
+name = "exrex"
+version = "0.11.0"
+description = "Irregular methods for regular expressions"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "exrex-0.11.0-py2.py3-none-any.whl", hash = "sha256:7bbc4987ebbb63cda7aad1a63b4e29032ba24826de4f295354bce1743e3aeb52"},
+    {file = "exrex-0.11.0.tar.gz", hash = "sha256:59912f0234567a5966b10d963c37ca9fe07f1640fd158e77c0dc7c3aee780489"},
+]
 
 [[package]]
 name = "fastcore"
@@ -678,6 +875,33 @@ files = [
     {file = "gast-0.4.0-py3-none-any.whl", hash = "sha256:b7adcdd5adbebf1adf17378da5ba3f543684dbec47b1cda1f3997e573cd542c4"},
     {file = "gast-0.4.0.tar.gz", hash = "sha256:40feb7b8b8434785585ab224d1568b857edb18297e5a3047f1ba012bc83b42c1"},
 ]
+
+[[package]]
+name = "genson"
+version = "1.2.2"
+description = "GenSON is a powerful, user-friendly JSON Schema generator."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "genson-1.2.2.tar.gz", hash = "sha256:8caf69aa10af7aee0e1a1351d1d06801f4696e005f06cedef438635384346a16"},
+]
+
+[[package]]
+name = "getjson"
+version = "2.0.0"
+description = "Request JSON data en masse with backoff and failover"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "getjson-2.0.0-py3-none-any.whl", hash = "sha256:c1de9e8dd0864c32fdf07c0b4a9c056f9506aaddb9d745a4f38079b9df1ec3b1"},
+    {file = "getjson-2.0.0.tar.gz", hash = "sha256:3ed740717046da068a87cf383ee2bd5ace75d2a167a654651e2fa1a883d23cf8"},
+]
+
+[package.dependencies]
+backoff = "*"
+requests = "*"
 
 [[package]]
 name = "ghapi"
@@ -896,6 +1120,34 @@ docs = ["matplotlib", "pydata-sphinx-theme", "sphinx (>=2.0)", "sphinx-gallery"]
 tests = ["pytest"]
 
 [[package]]
+name = "hyperopt"
+version = "0.2.7"
+description = "Distributed Asynchronous Hyperparameter Optimization"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "hyperopt-0.2.7-py2.py3-none-any.whl", hash = "sha256:f3046d91fe4167dbf104365016596856b2524a609d22f047a066fc1ac796427c"},
+    {file = "hyperopt-0.2.7.tar.gz", hash = "sha256:1bf89ae58050bbd32c7307199046117feee245c2fd9ab6255c7308522b7ca149"},
+]
+
+[package.dependencies]
+cloudpickle = "*"
+future = "*"
+networkx = ">=2.2"
+numpy = "*"
+py4j = "*"
+scipy = "*"
+six = "*"
+tqdm = "*"
+
+[package.extras]
+atpe = ["lightgbm", "scikit-learn"]
+dev = ["black", "nose", "pre-commit", "pytest"]
+mongotrials = ["pymongo"]
+sparktrials = ["pyspark"]
+
+[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -1038,6 +1290,18 @@ parso = ">=0.8.0,<0.9.0"
 docs = ["Jinja2 (==2.11.3)", "MarkupSafe (==1.1.1)", "Pygments (==2.8.1)", "alabaster (==0.7.12)", "babel (==2.9.1)", "chardet (==4.0.0)", "commonmark (==0.8.1)", "docutils (==0.17.1)", "future (==0.18.2)", "idna (==2.10)", "imagesize (==1.2.0)", "mock (==1.0.1)", "packaging (==20.9)", "pyparsing (==2.4.7)", "pytz (==2021.1)", "readthedocs-sphinx-ext (==2.1.4)", "recommonmark (==0.5.0)", "requests (==2.25.1)", "six (==1.15.0)", "snowballstemmer (==2.1.0)", "sphinx (==1.8.5)", "sphinx-rtd-theme (==0.4.3)", "sphinxcontrib-serializinghtml (==1.1.4)", "sphinxcontrib-websupport (==1.2.4)", "urllib3 (==1.26.4)"]
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "attrs", "colorama", "docopt", "pytest (<7.0.0)"]
+
+[[package]]
+name = "jmespath"
+version = "1.0.1"
+description = "JSON Matching Expressions"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "jmespath-1.0.1-py3-none-any.whl", hash = "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980"},
+    {file = "jmespath-1.0.1.tar.gz", hash = "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"},
+]
 
 [[package]]
 name = "joblib"
@@ -1396,6 +1660,56 @@ files = [
 traitlets = "*"
 
 [[package]]
+name = "microconventions"
+version = "1.0.0"
+description = "Conventions used at MicroPrediction.Org"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "microconventions-1.0.0-py3-none-any.whl", hash = "sha256:f61979aa1f42df3b9e244b4cc5943728a46eee7707d401b5525674e4a578da16"},
+    {file = "microconventions-1.0.0.tar.gz", hash = "sha256:5f10a0f05bf7548057448c35d39632846c696eb27320398d52c86b1e5ff3fc95"},
+]
+
+[package.dependencies]
+deepdiff = "*"
+getjson = ">=2.0.0"
+muid = ">=0.5.3"
+numpy = "*"
+pymorton = "*"
+schema = "*"
+scipy = "*"
+tdigest = "*"
+
+[[package]]
+name = "microprediction"
+version = "1.1.34"
+description = "Client for www.microprediction.org turnkey community prediction"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "microprediction-1.1.34-py3-none-any.whl", hash = "sha256:678df1b5dfaab0f4b6caa5ed6ff6356a0192d99256cf6a0c4cb7c8456cb0b166"},
+    {file = "microprediction-1.1.34.tar.gz", hash = "sha256:b569013e8888030938b7dd577af0e3b6a9ba1a1a35e7285345f7f47e844134b9"},
+]
+
+[package.dependencies]
+contexttimer = "*"
+copulas = "*"
+genson = "*"
+getjson = ">=2.0.0"
+hyperopt = "*"
+microconventions = ">=1.0.0"
+numpy = ">=1.20.1"
+pandas = "*"
+pycoingecko = "*"
+pytz = ">=2021.3"
+requests = "*"
+scikit-learn = "*"
+statsmodels = "*"
+tdigest = "*"
+
+[[package]]
 name = "mlxtend"
 version = "0.21.0"
 description = "Machine Learning Library Extensions"
@@ -1419,6 +1733,21 @@ setuptools = "*"
 [package.extras]
 docs = ["mkdocs"]
 testing = ["pytest"]
+
+[[package]]
+name = "muid"
+version = "0.5.3"
+description = "Memorable Unique Identifier"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "muid-0.5.3-py3-none-any.whl", hash = "sha256:164da2e8e33bc5e57bde6b879dd80963788e98ce93a82b2d3b33c6485a90e56b"},
+    {file = "muid-0.5.3.tar.gz", hash = "sha256:707bb649aa7c82745f64d25d91b532aacf0e468fe04421c19e268a2c9f856f24"},
+]
+
+[package.dependencies]
+contexttimer = "*"
 
 [[package]]
 name = "mypy-extensions"
@@ -1489,6 +1818,25 @@ files = [
     {file = "nest_asyncio-1.5.6-py3-none-any.whl", hash = "sha256:b9a953fb40dceaa587d109609098db21900182b16440652454a146cffb06e8b8"},
     {file = "nest_asyncio-1.5.6.tar.gz", hash = "sha256:d267cc1ff794403f7df692964d1d2a3fa9418ffea2a3f6859a439ff482fef290"},
 ]
+
+[[package]]
+name = "networkx"
+version = "3.1"
+description = "Python package for creating and manipulating graphs and networks"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "networkx-3.1-py3-none-any.whl", hash = "sha256:4f33f68cb2afcf86f28a45f43efc27a9386b535d567d2127f8f61d51dec58d36"},
+    {file = "networkx-3.1.tar.gz", hash = "sha256:de346335408f84de0eada6ff9fafafff9bcda11f0a0dfaa931133debb146ab61"},
+]
+
+[package.extras]
+default = ["matplotlib (>=3.4)", "numpy (>=1.20)", "pandas (>=1.3)", "scipy (>=1.8)"]
+developer = ["mypy (>=1.1)", "pre-commit (>=3.2)"]
+doc = ["nb2plots (>=0.6)", "numpydoc (>=1.5)", "pillow (>=9.4)", "pydata-sphinx-theme (>=0.13)", "sphinx (>=6.1)", "sphinx-gallery (>=0.12)", "texext (>=0.6.7)"]
+extra = ["lxml (>=4.6)", "pydot (>=1.4.2)", "pygraphviz (>=1.10)", "sympy (>=1.10)"]
+test = ["codecov (>=2.1)", "pytest (>=7.2)", "pytest-cov (>=4.0)"]
 
 [[package]]
 name = "numpy"
@@ -1563,6 +1911,21 @@ numpy = ">=1.7"
 [package.extras]
 docs = ["numpydoc", "sphinx (==1.2.3)", "sphinx-rtd-theme", "sphinxcontrib-napoleon"]
 tests = ["pytest", "pytest-cov", "pytest-pep8"]
+
+[[package]]
+name = "ordered-set"
+version = "4.1.0"
+description = "An OrderedSet is a custom MutableSet that remembers its order, so that every"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "ordered-set-4.1.0.tar.gz", hash = "sha256:694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8"},
+    {file = "ordered_set-4.1.0-py3-none-any.whl", hash = "sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562"},
+]
+
+[package.extras]
+dev = ["black", "mypy", "pytest"]
 
 [[package]]
 name = "packaging"
@@ -1968,6 +2331,18 @@ files = [
 tests = ["pytest"]
 
 [[package]]
+name = "py4j"
+version = "0.10.9.7"
+description = "Enables Python programs to dynamically access arbitrary Java objects"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "py4j-0.10.9.7-py2.py3-none-any.whl", hash = "sha256:85defdfd2b2376eb3abf5ca6474b51ab7e0de341c75a02f46dc9b5976f5a5c1b"},
+    {file = "py4j-0.10.9.7.tar.gz", hash = "sha256:0b6e5315bb3ada5cf62ac651d107bb2ebc02def3dee9d9548e3baac644ea8dbb"},
+]
+
+[[package]]
 name = "pyasn1"
 version = "0.4.8"
 description = "ASN.1 types and codecs"
@@ -2016,6 +2391,21 @@ seaborn = "*"
 statsmodels = "*"
 
 [[package]]
+name = "pycoingecko"
+version = "3.1.0"
+description = "Python wrapper around the CoinGecko API"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pycoingecko-3.1.0-py3-none-any.whl", hash = "sha256:5798240c0ffccfea14635b7ce42f90e49c8ba54a3cfa3e233fcc99df087485f6"},
+    {file = "pycoingecko-3.1.0.tar.gz", hash = "sha256:dcc08522c160e88bd1deb50bbab390be33dce87abb10a91ce6013d15bf859c12"},
+]
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
 name = "pycparser"
 version = "2.21"
 description = "C parser in Python"
@@ -2059,6 +2449,17 @@ files = [
 
 [package.extras]
 plugins = ["importlib-metadata"]
+
+[[package]]
+name = "pymorton"
+version = "1.0.5"
+description = "A lightweight morton coder with lat/long support."
+category = "main"
+optional = false
+python-versions = ">=2.6"
+files = [
+    {file = "pymorton-1.0.5-py2.py3-none-any.whl", hash = "sha256:b2df3ed2ab002f0b6780344485980130a3f959f959aea65301381b11cfe31dce"},
+]
 
 [[package]]
 name = "pyparsing"
@@ -2154,6 +2555,17 @@ python-versions = "*"
 files = [
     {file = "pytz-2022.7.1-py2.py3-none-any.whl", hash = "sha256:78f4f37d8198e0627c5f1143240bb0206b8691d8d7ac6d78fee88b78733f8c4a"},
     {file = "pytz-2022.7.1.tar.gz", hash = "sha256:01a0681c4b9684a28304615eba55d1ab31ae00bf68ec157ec3708a8182dbbcd0"},
+]
+
+[[package]]
+name = "pyudorandom"
+version = "1.0.0"
+description = "Generate pseudorandom numbers by using algebra"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyudorandom-1.0.0.tar.gz", hash = "sha256:f30a093a0170c15f9c7f87eb29f71f0f5fde995528b7c6dc4606d389e8c37755"},
 ]
 
 [[package]]
@@ -2377,6 +2789,39 @@ files = [
 pyasn1 = ">=0.1.3"
 
 [[package]]
+name = "s3transfer"
+version = "0.6.0"
+description = "An Amazon S3 Transfer Manager"
+category = "main"
+optional = false
+python-versions = ">= 3.7"
+files = [
+    {file = "s3transfer-0.6.0-py3-none-any.whl", hash = "sha256:06176b74f3a15f61f1b4f25a1fc29a4429040b7647133a463da8fa5bd28d5ecd"},
+    {file = "s3transfer-0.6.0.tar.gz", hash = "sha256:2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"},
+]
+
+[package.dependencies]
+botocore = ">=1.12.36,<2.0a.0"
+
+[package.extras]
+crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
+
+[[package]]
+name = "schema"
+version = "0.7.5"
+description = "Simple data validation library"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "schema-0.7.5-py2.py3-none-any.whl", hash = "sha256:f3ffdeeada09ec34bf40d7d79996d9f7175db93b7a5065de0faa7f41083c1e6c"},
+    {file = "schema-0.7.5.tar.gz", hash = "sha256:f06717112c61895cabc4707752b88716e8420a8819d71404501e114f91043197"},
+]
+
+[package.dependencies]
+contextlib2 = ">=0.5.5"
+
+[[package]]
 name = "scikit-learn"
 version = "1.2.1"
 description = "A set of python modules for machine learning and data mining"
@@ -2574,6 +3019,41 @@ scipy = [
 build = ["cython (>=0.29.32)"]
 develop = ["Jinja2", "colorama", "cython (>=0.29.32)", "cython (>=0.29.32,<3.0.0)", "flake8", "isort", "joblib", "matplotlib (>=3)", "oldest-supported-numpy (>=2022.4.18)", "pytest (>=7.0.1,<7.1.0)", "pytest-randomly", "pytest-xdist", "pywinpty", "setuptools-scm[toml] (>=7.0.0,<7.1.0)"]
 docs = ["ipykernel", "jupyter-client", "matplotlib", "nbconvert", "nbformat", "numpydoc", "pandas-datareader", "sphinx"]
+
+[[package]]
+name = "ta"
+version = "0.10.2"
+description = "Technical Analysis Library in Python"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "ta-0.10.2.tar.gz", hash = "sha256:e8d193dadd44d88e3c4118dc5224e2fcdc0235caba3efa758aa7a875ffba2faa"},
+]
+
+[package.dependencies]
+numpy = "*"
+pandas = "*"
+
+[[package]]
+name = "tdigest"
+version = "0.5.2.2"
+description = "T-Digest data structure"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "tdigest-0.5.2.2-py2.py3-none-any.whl", hash = "sha256:e32ff6ab62e4defdb93b816c831080d94dfa1efb68a9fa1e7976c237fa9375cb"},
+    {file = "tdigest-0.5.2.2-py3-none-any.whl", hash = "sha256:dd25f8d6e6be002192bba9e4b8c16491d36c10b389f50637818603d1f67c6fb2"},
+    {file = "tdigest-0.5.2.2.tar.gz", hash = "sha256:8deffc8bac024761786f43d9444e3b6c91008cd690323e051f068820a7364d0e"},
+]
+
+[package.dependencies]
+accumulation-tree = "*"
+pyudorandom = "*"
+
+[package.extras]
+tests = ["numpy", "pytest", "pytest-cov", "pytest-timeout"]
 
 [[package]]
 name = "tenacity"
@@ -2795,6 +3275,27 @@ files = [
     {file = "tornado-6.2-cp37-abi3-win_amd64.whl", hash = "sha256:e5f923aa6a47e133d1cf87d60700889d7eae68988704e20c75fb2d65677a8e4b"},
     {file = "tornado-6.2.tar.gz", hash = "sha256:9b630419bde84ec666bfd7ea0a4cb2a8a651c2d5cccdbdd1972a0c859dfc3c13"},
 ]
+
+[[package]]
+name = "tqdm"
+version = "4.65.0"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tqdm-4.65.0-py3-none-any.whl", hash = "sha256:c4f53a17fe37e132815abceec022631be8ffe1b9381c2e6e30aa70edc99e9671"},
+    {file = "tqdm-4.65.0.tar.gz", hash = "sha256:1871fb68a86b8fb3b59ca4cdd3dcccbc7e6d613eeed31f4c332531977b89beb5"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
 
 [[package]]
 name = "traitlets"
@@ -3108,4 +3609,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "b4bf85330f8a49615381b2589821ac90aaa7c40c28b8716c04397be6654877f1"
+content-hash = "bd2b5dd09f97ae3d80685810971314dff6d5295bd88149ac1f0cdfdb329a31e3"
