@@ -34,7 +34,7 @@ textblob = "^0.17.1"
 python-dotenv = "^1.0.0"
 yfinance = "^0.2.16"
 darts = "^0.23.1"
-quant-invest-lab = "0.2.5"
+quant-invest-lab = "0.2.6"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"

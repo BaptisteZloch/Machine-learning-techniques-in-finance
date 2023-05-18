@@ -1,7 +1,7 @@
 from sklearn.linear_model import LinearRegression
 import pandas as pd
 import numpy as np
-from multiprocessing import cpu_count
+from psutil import cpu_count
 
 
 def compute_lagging_regression(time_serie: pd.Series, window: int = 15) -> pd.DataFrame:
